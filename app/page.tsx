@@ -86,7 +86,7 @@ export default function Home() {
       >
         <SectionTitle subtitle="Original Stories">LATEST COMICS</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
-          {comics.map((comic, index) => (
+          {comics.slice(0, 3).map((comic, index) => (
             <ComicCard key={comic.id} comic={comic} index={index} />
           ))}
         </div>
