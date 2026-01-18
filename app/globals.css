@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ===================== */
+/* TAILWIND V4 THEME     */
+/* ===================== */
+
+@theme {
+  /* Colors */
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-surfaceHighlight: #1e1e1e;
+  --color-primary: #ccff00;
+  --color-secondary: #9d4edd;
+
+  /* Fonts */
+  --font-sans: "Outfit", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Animations */
+  --animate-noise-move: noise-move 0.5s steps(5) infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Dark mode variant for manual toggle */
+@custom-variant dark (&:where(.dark, .dark *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===================== */
+/* KEYFRAMES             */
+/* ===================== */
+
+@keyframes noise-move {
+  0% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: -10% 10%;
+  }
+  40% {
+    background-position: -20% -30%;
+  }
+  60% {
+    background-position: 10% -10%;
+  }
+  80% {
+    background-position: 30% 20%;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ===================== */
+/* BASE STYLES           */
+/* ===================== */
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+  /* Cyberpunk Grid Background */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+
+/* ===================== */
+/* CUSTOM SCROLLBAR      */
+/* ===================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccff00;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aacc00;
+}
+
+/* ===================== */
+/* UTILITY CLASSES       */
+/* ===================== */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Safe area for mobile bottom nav */
+.pb-safe-area {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Noise background utility */
+.bg-noise {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+/* Text shadow for readability on images */
+.text-shadow-md {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
