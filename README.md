@@ -1,138 +1,176 @@
-# 🔄 ALT F5 | Digital Collective
-
 <div align="center">
 
-![ALTF5 Banner](https://img.shields.io/badge/ALT_F5-Refresh_Reality-ccff00?style=for-the-badge&labelColor=000000)
+# 🔄 ALT F5 | Digital Collective
 
-**A digital collective crafting immersive comics, audio experiences, and indie games for those who want to escape the mundane.**
+<p align="center">
+  <strong>"Refresh Reality — Dijital Hikaye Anlatımının Cyberpunk Evreni"</strong>
+</p>
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.1.3-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.3-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-4-06b6d4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
-[![Zustand](https://img.shields.io/badge/Zustand-5.0.10-443e38?style=flat-square)](https://zustand-demo.pmnd.rs/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.27.0-ff0055?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+[![Preview](https://raw.githubusercontent.com/hsemihaktas/My-assets/main/alt-f5/preview.webp)](https://github.com/hsemihaktas/My-assets/blob/main/alt-f5/preview.webp)
+
+<br />
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.3-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.3-20232a?style=for-the-badge&logo=react&logoColor=61dafb)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Zustand](https://img.shields.io/badge/Zustand-5.0.10-443e38?style=for-the-badge)](https://zustand-demo.pmnd.rs/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.27.0-ff0055?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+
+<br />
+
+[Özellikler](#-öne-çıkan-özellikler) • [Ekran Görüntüleri](#-önizleme) • [Teknoloji Yığını](#-teknoloji-yığını) • [Proje Mimarisi](#-proje-mimarisi) • [Kurulum](#-kurulum-ve-çalıştırma) • [Sayfa Rotaları](#-sayfa-rotaları)
 
 </div>
 
 ---
 
-## 📖 Proje Hakkında
+## 🌌 Proje Vizyonu
 
-**ALT F5**, dijital hikaye anlatımının geleceğini inşa eden bir kolektiftir. Bu web uygulaması, orijinal çizgi romanları, podcast'leri ve indie oyunları tek bir cyberpunk estetikli platformda bir araya getirir.
+**ALT F5**, sıradanlıktan kaçmak ve dijital sanatın sınırlarını zorlamak isteyenler için geliştirilmiş yeni nesil bir dijital kolektif platformudur. 
 
-### ✨ Öne Çıkan Özellikler
-
-- 🎨 **Cyberpunk Estetik** – Neon yeşil vurgular, karanlık temalar ve retro-futuristik tasarım
-- 📚 **Çizgi Roman Okuyucu** – Tam ekran, sayfa sayfa okuma deneyimi
-- 🎧 **Podcast Hub** – Sesli içerikler için özel oynatıcı arayüzü
-- 🎮 **Oyun Vitrini** – Indie oyunların detaylı gösterimi
-- 🌊 **Akıcı Animasyonlar** – Framer Motion ile güçlendirilmiş geçişler
-- 📱 **Responsive Tasarım** – Mobil öncelikli, tüm ekran boyutlarına uyumlu
-- 🔐 **Kimlik Yönetimi** – Modal tabanlı auth sistemi altyapısı
+Orijinal çizgi romanlar, atmosferik podcast yayınları ve bağımsız (indie) video oyunlarını yüksek tempolu, karanlık ve neon vurgulu bir **Cyberpunk** estetiğinde tek çatı altında buluşturur.
 
 ---
 
-## 🏗️ Proje Yapısı
+## 🖼️ Önizleme
 
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/hsemihaktas/My-assets/main/alt-f5/preview.webp" alt="ALT F5 Arayüz Önizlemesi" width="100%" style="border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+  <p><em>Retro-futuristik tipografi, neon ızgara arka planları ve dinamik vitrin deneyimi.</em></p>
+</div>
+
+---
+
+## ✨ Öne Çıkan Özellikler
+
+### 📚 İnteraktif Çizgi Roman Okuyucu (Comic Reader Engine)
+- **Çift Sayfa Simülasyonu:** Masaüstü ve geniş ekranlarda gerçek çizgi roman açılış hissi veren çift sayfa (`spread view`), mobilde ise dikey ve tek sayfa akış modu.
+- **Doku & Derinlik:** Gerçek baskı hissi katan grain/noise dokusu (`bg-noise`) ve sayfa sırtı gölgelendirmeleri (`spine gradient`).
+- **Okuma Kontrolleri:** Yakınlaştırma (Zoom In/Out), tam ekran (`fullscreen`), sayfa kaydırıcı (`scrubber slider`) ve klavye kısayolları (Sağ/Sol Ok, Boşluk, ESC).
+- **Kategori Filtreleme:** Cyberpunk, Horror, Sci-Fi ve Fantasy kategorilerine göre anında içerik listeleme.
+
+### 🎙️ Podcast & Audio Hub
+- **Canlı Frekans Arayüzü:** Ses dalgası animasyonları, mikrofon görselleştirmeleri ve bölüm arama modülü.
+- **Detaylı Bölüm Oynatıcısı:** Oynat/Durdur kontrolleri, süre göstergeleri, konuk & sunucu listesi ve kapsamlı gösterim notları (`show notes`).
+
+### 🎮 Indie Arcade Vitrini
+- **Öne Çıkan Oyun Banner'ı:** Post-apokaliptik neon temalı manşet oyun alanı ve aksiyon etiketleri.
+- **Kapsamlı Oyun Kartları:** Fiyatlandırma, indirim oranları, kullanıcı puanlaması (`rating`), geliştirici bilgisi ve orijinal yapım etiketleri.
+- **Teknik Özellikler & Galeri:** Sistem gereksinimleri (OS, CPU, RAM, GPU, Depolama) ve oyun içi ekran görüntüsü galerisi.
+
+### 🔐 Kimlik Doğrulama Modalı (Auth System)
+- Framer Motion yay fiziği (`spring physics`) ile açılan ve arka planı bulanıklaştıran (`backdrop blur`) modal.
+- Giriş Yap (Login) ve Kolektife Katıl (Sign Up) geçişleri, siber tasarımlı form bileşenleri.
+
+### ⚡ Performans ve Tasarım
+- **Tailwind CSS v4:** `@theme` direktifi üzerinden merkezi renk, font ve animasyon token'ları.
+- **Akıcı Animasyonlar:** Yatay sürükle-bırak (`drag="x"`) koleksiyon şeritleri, parallax scroll ve hover 3D kart efektleri.
+- **SEO & Erişilebilirlik:** Next.js Metadata API, optimize edilmiş font yüklemesi (`next/font/google`) ve responsive tasarım.
+
+---
+
+## 🛠️ Teknoloji Yığını
+
+| Alan | Teknoloji | Versiyon | Görev / Kullanım Amacı |
+| :--- | :--- | :--- | :--- |
+| **Framework** | [Next.js](https://nextjs.org/) | `16.1.3` | App Router mimarisi, SSR ve görsel optimizasyonu |
+| **Kütüphane** | [React](https://react.dev/) | `19.2.3` | Modern reaktif UI bileşenleri |
+| **Tip Güvenliği** | [TypeScript](https://www.typescriptlang.org/) | `^5.0.0` | Güçlü tip tanımlamaları ve ölçeklenebilir kod tabanı |
+| **Stil / CSS** | [Tailwind CSS](https://tailwindcss.com/) | `^4.0.0` | `@theme` tabanlı CSS değişkenleri ve modern yardımcı sınıflar |
+| **State Yönetimi** | [Zustand](https://zustand-demo.pmnd.rs/) | `^5.0.10` | Hızlı, seçici tabanlı (selector-based) küresel state |
+| **Animasyon** | [Framer Motion](https://www.framer.com/motion/) | `^12.27.0` | Sayfa geçişleri, parallax, sürükleme ve modal animasyonları |
+| **İkon Seti** | [Lucide React](https://lucide.dev/) | `^0.562.0` | Temiz ve optimize edilmiş modern SVG ikonlar |
+
+---
+
+## 📁 Proje Mimarisi
+
+```text
 ALTF5/
-├── app/                          # Next.js App Router
-│   ├── layout.tsx                # Root layout (fonts, providers)
-│   ├── page.tsx                  # Ana sayfa
-│   ├── globals.css               # Global stiller & Tailwind v4 tema
-│   ├── comic/[id]/page.tsx       # Çizgi roman detay sayfası
-│   ├── comics/page.tsx           # Çizgi roman listesi (kategori filtreli)
-│   ├── podcast/[id]/page.tsx     # Podcast detay sayfası
-│   ├── podcasts/page.tsx         # Podcast listesi
-│   ├── game/[id]/page.tsx        # Oyun detay sayfası
-│   └── games/page.tsx            # Oyun listesi
+├── app/                              # Next.js App Router Dizin Yapısı
+│   ├── comic/[id]/page.tsx           # Çizgi roman detay sayfası & okuyucu başlatıcı
+│   ├── comics/page.tsx               # Filtrelenebilir çizgi roman kütüphanesi
+│   ├── game/[id]/page.tsx            # Oyun detay sayfası (ekran görüntüleri, specs)
+│   ├── games/page.tsx                # Indie oyun vitrini & Arcade merkezi
+│   ├── podcast/[id]/page.tsx         # Podcast detay sayfası & ses çalar arayüzü
+│   ├── podcasts/page.tsx             # Tüm ses kayıtları ve canlı frekans bölümü
+│   ├── globals.css                   # Tailwind v4 tema token'ları & özel keyframe'ler
+│   ├── layout.tsx                    # Kök düzen (Google Fonts, AuthProvider, Navbar, Footer)
+│   └── page.tsx                      # Ana sayfa (Hero, Trending Strip, Vitrin bölümleri)
 │
 ├── components/
-│   ├── common/                   # Paylaşılan bileşenler
-│   │   ├── AuthModal.tsx         # Giriş/Kayıt modal'ı
-│   │   ├── ComicCard.tsx         # Çizgi roman kartı
-│   │   ├── ComicCardSkeleton.tsx # Yükleme iskeleti
-│   │   ├── ComicReader.tsx       # Tam ekran okuyucu
-│   │   ├── GameCard.tsx          # Oyun kartı
-│   │   └── PodcastCard.tsx       # Podcast kartı
+│   ├── common/                       # Tekrar kullanılabilir ortak bileşenler
+│   │   ├── AuthModal.tsx             # Giriş / Kayıt modalı ve form yapısı
+│   │   ├── ComicCard.tsx             # 3D hover efektli çizgi roman kartı
+│   │   ├── ComicCardSkeleton.tsx     # Yükleme iskelet animasyonu
+│   │   ├── ComicReader.tsx           # Çift sayfa / Tek sayfa okuma motoru
+│   │   ├── GameCard.tsx              # Fiyat, indirim ve puanlama içeren oyun kartı
+│   │   └── PodcastCard.tsx           # Oynatma süresi ve bölüm bilgili ses kartı
 │   ├── home/
-│   │   └── Hero.tsx              # Parallax hero bölümü
+│   │   └── Hero.tsx                  # Parallax efektli manşet ve interaktif aksiyonlar
 │   └── layout/
-│       ├── Navbar.tsx            # Scroll-aware navbar
-│       └── Footer.tsx            # Site footer'ı
+│       ├── Navbar.tsx                # Scroll duyarlı, bulanık arka planlı gezinme çubuğu
+│       └── Footer.tsx                # Siberpunk stilinde telif ve bağlantı altlığı
 │
 ├── context/
-│   └── AuthContext.tsx           # Kimlik doğrulama context'i
+│   └── AuthContext.tsx               # Modal görünürlüğü ve oturum context'i
 │
 ├── lib/
-│   ├── store.ts                  # Zustand global store
-│   └── types.ts                  # TypeScript interface'leri
+│   ├── store.ts                      # Zustand veri mağazası, mock veriler ve selector'lar
+│   └── types.ts                      # Comic, Podcast, Game TypeScript arayüzleri
 │
-└── public/                       # Statik dosyalar
+└── public/                           # Statik görsel ve medya varlıkları
 ```
 
 ---
 
-## 📦 Tech Stack
+## 🎨 Tasarım Sistemi & Tema
 
-| Katman         | Teknoloji     | Versiyon | Açıklama                            |
-| -------------- | ------------- | -------- | ----------------------------------- |
-| **Framework**  | Next.js       | 16.1.3   | App Router, RSC, Image Optimization |
-| **UI Library** | React         | 19.2.3   | Client Components                   |
-| **Dil**        | TypeScript    | 5        | Tip güvenliği                       |
-| **Styling**    | Tailwind CSS  | 4        | @theme directive ile CSS variables  |
-| **State**      | Zustand       | 5.0.10   | Hafif, selector tabanlı store       |
-| **Animasyon**  | Framer Motion | 12.27.0  | Parallax, geçişler, drag            |
-| **İkonlar**    | Lucide React  | 0.562.0  | SVG ikon kütüphanesi                |
-
----
-
-## 🎨 Tasarım Sistemi
+Tailwind CSS v4 `@theme` yapısı kullanılarak hazırlanan renk paleti ve tipografi sistemi:
 
 ### Renk Paleti
 
 ```css
---color-background: #050505 /* Derin siyah */ --color-surface: #121212
-  /* Yüzey siyahı */ --color-surfaceHighlight: #1e1e1e /* Vurgulu yüzey */
-  --color-primary: #ccff00 /* Neon yeşil (aksan) */ --color-secondary: #9d4edd
-  /* Mor (ikincil aksan) */;
+--color-background:        #050505;  /* Deep Void (Ana arka plan) */
+--color-surface:           #121212;  /* Kart ve panel zemin rengi */
+--color-surfaceHighlight:  #1e1e1e;  /* Vurgulu yüzey ve ayrıcı rengi */
+--color-primary:           #ccff00;  /* Neon Volt / Cyber Lime (Ana aksan) */
+--color-secondary:         #9d4edd;  /* Synth Purple / Electric Violet (İkincil aksan) */
 ```
 
 ### Tipografi
 
-- **Display Font**: Space Grotesk – Başlıklar, logolar
-- **Body Font**: Outfit – Paragraflar, genel metin
-- **Mono Font**: System UI Monospace – Kod görünümlü metinler
+- **Display Font:** `Space Grotesk` – Başlıklar, logo ve vurucu sloganlar
+- **Sans-Serif Font:** `Outfit` – Gövde metinleri, açıklamalar ve form arayüzleri
+- **Mono Font:** `System UI Monospace` – Kod blokları, teknik veri etiketleri ve künyeler
 
-### Özel Animasyonlar
+### Özel Efektler ve Keyframe'ler
 
-- `noise-move` – Arka plan gürültü efekti
-- `pulse-slow` – Yavaş nabız atan blur efektleri
-- `shimmer` – Skeleton card parlaması
+- **Grid Background:** 50px sabit ızgara deseni ile cyberpunk atmosferi
+- **Noise Texture:** Çizgi roman sayfaları ve paneller için analog gren dokusu
+- **Custom Scrollbar:** Neon yeşil kaydırma çubuğu ve koyu zemin rayı
 
 ---
 
-## 🗃️ Veri Yapıları
+## 🗃️ Veri Modelleri
 
-### Comic
+Uygulamada kullanılan temel veri tipleri (`lib/types.ts`):
 
 ```typescript
-interface Comic {
+// Çizgi Roman
+export interface Comic {
   id: string;
   title: string;
   author: string;
   coverImage: string;
   description: string;
-  tags: string[]; // ["Cyberpunk", "Noir"]
-  pages: string[]; // Sayfa URL'leri
+  tags: string[];        // Örn: ["Cyberpunk", "Noir"]
+  pages: string[];       // Sayfa URL dizisi
 }
-```
 
-### Podcast
-
-```typescript
-interface Podcast {
+// Podcast
+export interface Podcast {
   id: string;
   title: string;
   episode: number;
@@ -143,12 +181,9 @@ interface Podcast {
   hosts?: string[];
   fullDescription?: string;
 }
-```
 
-### Game
-
-```typescript
-interface Game {
+// Oyun
+export interface Game {
   id: string;
   title: string;
   developer: string;
@@ -172,157 +207,81 @@ interface Game {
 
 ---
 
-## 🚀 Kurulum & Çalıştırma
+## 🚦 Sayfa Rotaları
+
+| Rota | Sayfa | Açıklama |
+| :--- | :--- | :--- |
+| `/` | **Ana Sayfa** | Hero bölümü, trending strip, öne çıkan çizgi roman, podcast ve oyunlar |
+| `/comics` | **Çizgi Roman Arşivi** | Kategori etiket filtreli (All, Cyberpunk, Horror, Sci-Fi, Fantasy) koleksiyon |
+| `/comic/[id]` | **Çizgi Roman Detayı** | Eser özeti, yazar bilgisi ve tam teşekküllü `ComicReader` okuma motoru |
+| `/podcasts` | **Ses Kayıtları** | Canlı frekans manşeti, bölüm arama çubuğu ve yayın listesi |
+| `/podcast/[id]` | **Bölüm Detayı** | Dinamik arka plan ambiyansı, oynatıcı kontrolleri ve bölüm notları |
+| `/games` | **Indie Arcade** | Öne çıkan "Cyber Squirrels" manşeti ve bağımsız oyun vitrini |
+| `/game/[id]` | **Oyun Detayı** | Ekran görüntüleri, mağaza bağlantısı ve donanım gereksinimleri tablosu |
+
+---
+
+## 🚀 Kurulum ve Çalıştırma
+
+Projeyi yerel ortamınızda ayağa kaldırmak için aşağıdaki adımları izleyin:
 
 ### Gereksinimler
+- **Node.js**: `v18.18.0` veya üzeri
+- **Paket Yöneticisi**: `npm`, `pnpm` veya `yarn`
 
-- Node.js 18+
-- npm veya yarn
-
-### Adımlar
-
+### 1. Depoyu Klonlayın
 ```bash
-# 1. Repo'yu klonla
-git clone https://github.com/your-username/altf5.git
-cd altf5
+git clone https://github.com/hsemihaktas/ALTF5.git
+cd ALTF5
+```
 
-# 2. Bağımlılıkları yükle
+### 2. Bağımlılıkları Yükleyin
+```bash
 npm install
-
-# 3. Geliştirme sunucusunu başlat
-npm run dev
-
-# 4. Tarayıcıda aç
-open http://localhost:3000
 ```
 
-### Diğer Komutlar
+### 3. Geliştirme Sunucusunu Başlatın
+```bash
+npm run dev
+```
+
+Tarayıcınızda **[http://localhost:3000](http://localhost:3000)** adresine giderek uygulamayı görüntüleyebilirsiniz.
+
+### 4. Diğer Betikler
 
 ```bash
-npm run build    # Production build oluştur
-npm run start    # Production sunucusu başlat
-npm run lint     # ESLint kontrolü
+npm run build   # Üretim (production) derlemesini hazırlar
+npm run start   # Hazırlanan derlemeyi sunar
+npm run lint    # ESLint kurallarını denetler
 ```
-
----
-
-## 📄 Sayfa Rotaları
-
-| Rota            | Sayfa          | Açıklama                            |
-| --------------- | -------------- | ----------------------------------- |
-| `/`             | Ana Sayfa      | Hero, trending, özet bölümler       |
-| `/comics`       | Comic Library  | Filtrelenebilir çizgi roman listesi |
-| `/comic/[id]`   | Comic Detail   | Detay + okuyucu mod                 |
-| `/podcasts`     | Podcast Hub    | Tüm podcast bölümleri               |
-| `/podcast/[id]` | Podcast Detail | Detaylı bölüm bilgisi               |
-| `/games`        | Indie Arcade   | Oyun vitrini                        |
-| `/game/[id]`    | Game Detail    | Screenshots, specs, satın alma      |
-
----
-
-## 🔧 Zustand Store Kullanımı
-
-```typescript
-import { useDataStore } from "@/lib/store";
-
-// Tüm verileri al
-const { comics, podcasts, games } = useDataStore();
-
-// Selector ile spesifik veri
-const comic = useDataStore((state) => state.getComicById("1"));
-const filtered = useDataStore((state) => state.getComicsByTag("Horror"));
-```
-
-### Store Metodları
-
-| Metod                 | Parametre | Dönen Tip              |
-| --------------------- | --------- | ---------------------- |
-| `getComicById(id)`    | `string`  | `Comic \| undefined`   |
-| `getPodcastById(id)`  | `string`  | `Podcast \| undefined` |
-| `getGameById(id)`     | `string`  | `Game \| undefined`    |
-| `getComicsByTag(tag)` | `string`  | `Comic[]`              |
-
----
-
-## 🎬 Bileşen Özellikleri
-
-### ComicReader
-
-- Keyboard navigation (← →)
-- Touch swipe desteği
-- Tam ekran toggle
-- Sayfa progress bar'ı
-
-### Hero
-
-- Parallax scroll efektleri
-- Animated glow blob'ları
-- Responsive tipografi (mobile → desktop ölçekleme)
-
-### Navbar
-
-- Scroll-aware arka plan blur'u
-- Mobile hamburger menü
-- Active link indicator
-
-### ComicCard
-
-- Skeleton loading state
-- Hover tabanlı 3D transform
-- Lazy image loading
-
----
-
-## 🌐 SEO & Performans
-
-- ✅ Next.js Image component ile otomatik optimizasyon
-- ✅ Metadata API ile dinamik title/description
-- ✅ Font preloading (Outfit, Space Grotesk)
-- ✅ CSS variables ile tema tutarlılığı
-- ✅ Viewport-based lazy loading
-
----
-
-## 📝 Geliştirici Notları
-
-### Tailwind CSS v4
-
-Bu proje Tailwind CSS v4 kullanmaktadır. Tema ayarları `globals.css` içindeki `@theme` direktifi ile yapılır:
-
-```css
-@theme {
-  --color-primary: #ccff00;
-  --font-display: "Space Grotesk", sans-serif;
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-```
-
-### Dark Mode
-
-Proje varsayılan olarak dark mode'dadır. `<html>` elementi üzerindeki `dark` class'ı ile kontrol edilir.
 
 ---
 
 ## 🤝 Katkıda Bulunma
 
-1. Fork'la
-2. Feature branch oluştur (`git checkout -b feature/yeni-ozellik`)
-3. Commit'le (`git commit -m 'feat: yeni özellik eklendi'`)
-4. Push'la (`git push origin feature/yeni-ozellik`)
-5. Pull Request aç
+1. Bu depoyu çatallayın (**Fork**).
+2. Yeni bir özellik dalı oluşturun:
+   ```bash
+   git checkout -b feature/harika-ozellik
+   ```
+3. Değişikliklerinizi commit edin:
+   ```bash
+   git commit -m 'feat: Yeni özellik eklendi'
+   ```
+4. Dalınızı uzak depoya gönderin:
+   ```bash
+   git push origin feature/harika-ozellik
+   ```
+5. Bir **Pull Request** açın.
 
 ---
 
 ## 📜 Lisans
 
-Bu proje özel lisans altındadır. Tüm hakları saklıdır.
-
----
+Bu proje **MIT Lisansı** veya özel kullanım hakları kapsamında korunmaktadır. Detaylar için iletişime geçiniz.
 
 <div align="center">
-
-**DESIGNED IN THE VOID** 🕳️
-
-© 2025 ALT F5. ALL RIGHTS RESERVED.
-
+  <br />
+  <strong>DESIGNED IN THE VOID 🕳️</strong><br />
+  <sub>© 2025 - 2026 ALT F5. All rights reserved.</sub>
 </div>
